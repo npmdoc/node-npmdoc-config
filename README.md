@@ -1,11 +1,13 @@
-# api documentation for  [config (v1.25.1)](http://lorenwest.github.com/node-config)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-config.svg)](https://travis-ci.org/npmdoc/node-npmdoc-config)
+# api documentation for  [config (v1.25.1)](http://lorenwest.github.com/node-config)  [![npm package](https://img.shields.io/npm/v/npmdoc-config.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-config) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-config.svg)](https://travis-ci.org/npmdoc/node-npmdoc-config)
 #### Configuration control for production node deployments
 
 [![NPM](https://nodei.co/npm/config.png?downloads=true)](https://www.npmjs.com/package/config)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-config/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-config_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-config/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-config/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-config_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-config/build..beta..travis-ci.org/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-config/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-config/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-config/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
@@ -88,10 +90,78 @@
 # <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
 
 #### [module config](#apidoc.module.config)
+1.  object <span class="apidocSignatureSpan">config.</span>defer
+1.  object <span class="apidocSignatureSpan">config.</span>raw
+
+#### [module config.defer](#apidoc.module.config.defer)
+1.  [function <span class="apidocSignatureSpan">config.defer.</span>DeferredConfig ()](#apidoc.element.config.defer.DeferredConfig)
+1.  [function <span class="apidocSignatureSpan">config.defer.</span>deferConfig (func)](#apidoc.element.config.defer.deferConfig)
+
+#### [module config.raw](#apidoc.module.config.raw)
+1.  [function <span class="apidocSignatureSpan">config.</span>raw (rawObj)](#apidoc.element.config.raw.raw)
+1.  [function <span class="apidocSignatureSpan">config.raw.</span>RawConfig ()](#apidoc.element.config.raw.RawConfig)
 
 
 
 # <a name="apidoc.module.config"></a>[module config](#apidoc.module.config)
+
+
+
+# <a name="apidoc.module.config.defer"></a>[module config.defer](#apidoc.module.config.defer)
+
+#### <a name="apidoc.element.config.defer.DeferredConfig"></a>[function <span class="apidocSignatureSpan">config.defer.</span>DeferredConfig ()](#apidoc.element.config.defer.DeferredConfig)
+- description and source-code
+```javascript
+function DeferredConfig() {
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.config.defer.deferConfig"></a>[function <span class="apidocSignatureSpan">config.defer.</span>deferConfig (func)](#apidoc.element.config.defer.deferConfig)
+- description and source-code
+```javascript
+function deferConfig(func) {
+  var obj = Object.create(DeferredConfig.prototype);
+  obj.resolve = func;
+  return obj;
+}
+```
+- example usage
+```shell
+n/a
+```
+
+
+
+# <a name="apidoc.module.config.raw"></a>[module config.raw](#apidoc.module.config.raw)
+
+#### <a name="apidoc.element.config.raw.raw"></a>[function <span class="apidocSignatureSpan">config.</span>raw (rawObj)](#apidoc.element.config.raw.raw)
+- description and source-code
+```javascript
+function raw(rawObj) {
+  var obj = Object.create(RawConfig.prototype);
+  obj.resolve = function () { return rawObj; }
+  return obj;
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.config.raw.RawConfig"></a>[function <span class="apidocSignatureSpan">config.raw.</span>RawConfig ()](#apidoc.element.config.raw.RawConfig)
+- description and source-code
+```javascript
+function RawConfig() {
+}
+```
+- example usage
+```shell
+n/a
+```
 
 
 
