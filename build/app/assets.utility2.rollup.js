@@ -628,15 +628,18 @@ local.templateApidocMd = '\
                 template: local.templateApidocHtml
             });
             // init exampleList
-            options.exampleList = options.exampleList.concat(options.exampleFileList.concat(
-                local.fs.readdirSync(options.dir)
-                    .sort()
-                    .filter(function (file) {
-                        return file.indexOf(options.env.npm_package_main) === 0 ||
-                            (/^(?:readme)\b/i).test(file) ||
-                            (/^(?:index|lib|test)\b.*\.js$/i).test(file);
-                    })
-            ).map(readExample));
+            try {
+                options.exampleList = options.exampleList.concat(options.exampleFileList.concat(
+                    local.fs.readdirSync(options.dir)
+                        .sort()
+                        .filter(function (file) {
+                            return file.indexOf(options.env.npm_package_main) === 0 ||
+                                (/^(?:readme)\b/i).test(file) ||
+                                (/^(?:index|lib|test)\b.*\.js$/i).test(file);
+                        })
+                ).map(readExample));
+            } catch (ignore) {
+            }
             // init moduleMain
             try {
                 moduleMain = {};
