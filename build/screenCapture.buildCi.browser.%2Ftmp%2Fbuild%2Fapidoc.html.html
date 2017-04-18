@@ -54,12 +54,144 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.config">module config</a><ol>
 
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">config.</span>defer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">config.</span>raw</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.config.defer">module config.defer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.config.defer.DeferredConfig">
+            function <span class="apidocSignatureSpan">config.defer.</span>DeferredConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.config.defer.deferConfig">
+            function <span class="apidocSignatureSpan">config.defer.</span>deferConfig
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.config.raw">module config.raw</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.config.raw.raw">
+            function <span class="apidocSignatureSpan">config.</span>raw
+            <span class="apidocSignatureSpan">(rawObj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.config.raw.RawConfig">
+            function <span class="apidocSignatureSpan">config.raw.</span>RawConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.config" id="apidoc.module.config">module config</a></h1>
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.config.defer" id="apidoc.module.config.defer">module config.defer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.config.defer.DeferredConfig" id="apidoc.element.config.defer.DeferredConfig">
+        function <span class="apidocSignatureSpan">config.defer.</span>DeferredConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DeferredConfig() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.config.defer.deferConfig" id="apidoc.element.config.defer.deferConfig">
+        function <span class="apidocSignatureSpan">config.defer.</span>deferConfig
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deferConfig(func) {
+  var obj = Object.create(DeferredConfig.prototype);
+  obj.resolve = func;
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.config.raw" id="apidoc.module.config.raw">module config.raw</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.config.raw.raw" id="apidoc.element.config.raw.raw">
+        function <span class="apidocSignatureSpan">config.</span>raw
+        <span class="apidocSignatureSpan">(rawObj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function raw(rawObj) {
+  var obj = Object.create(RawConfig.prototype);
+  obj.resolve = function () { return rawObj; }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.config.raw.RawConfig" id="apidoc.element.config.raw.RawConfig">
+        function <span class="apidocSignatureSpan">config.raw.</span>RawConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RawConfig() {
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
