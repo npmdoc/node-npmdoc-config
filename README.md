@@ -1,6 +1,6 @@
 # npmdoc-config
 
-#### api documentation for  [config (v1.25.1)](http://lorenwest.github.com/node-config)  [![npm package](https://img.shields.io/npm/v/npmdoc-config.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-config) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-config.svg)](https://travis-ci.org/npmdoc/node-npmdoc-config)
+#### basic api documentation for  [config (v1.25.1)](http://lorenwest.github.com/node-config)  [![npm package](https://img.shields.io/npm/v/npmdoc-config.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-config) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-config.svg)](https://travis-ci.org/npmdoc/node-npmdoc-config)
 
 #### Configuration control for production node deployments
 
@@ -82,7 +82,8 @@
     "scripts": {
         "test": "./node_modules/vows/bin/vows test/*.js --spec"
     },
-    "version": "1.25.1"
+    "version": "1.25.1",
+    "bin": {}
 }
 ```
 
